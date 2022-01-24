@@ -1,0 +1,45 @@
+Hi, I have added an NDA file.
+First of all I want to thank you for showing your interest in the project.
+
+What I need to develop is a web app that will not need to be published on any store or website. It will have to be run only locally through a browser, preferably chrome.
+
+In this way, through OBS and OBS ninja I will be able to integrate the Chrome window on which the game runs and the web cameras of the competitors.
+
+It will aim to get disabled or handicapped kids to play from their homes. I will be the host of this game and follow the commands they dictate to me. The experience will be similar to a television show. It is a non-profit project. The screens in the game will be driven by a button panel. Each screen change will have a graphic curtain that will allow me enough time to change the scene on OBS.
+
+Being a BIBLE-based puzzle game, there will be a link to an xml file from which chapter titles and book names will be taken.
+
+The game consists of 3 types of puzzle games.
+
+One similar to wheel of fortune, one of hidden words and the last one of finding the word intruder. In the latter there must be human control.
+
+Another type of game involves answering a question, and there is a file for this too, but in csv format.
+
+The total number of screens in the game is 7. The graphics have already been made on XD.
+
+Being a game not to be published and that will run exclusively locally and not having profit the budget is kept to a minimum.
+Players will not actually have to have their own play station. It is not a real time multi game. It's like a single player because it will be run by a single user.
+
+The people interfacing will be voice guided via webcam.
+
+======================================================================================================================================================================
+
+Hello, thanks for your reply!
+
+I understood your task, it sounds really interesting and I am confident to achieve this for you, since I mainly write computer games. 
+
+I have a few questions:
+
+Are the button panels hardware or shall I program software button panels for you?
+
+What file format do the graphic files have? Are they simple pictures or are they animations?
+
+I assume that the 7 screens are not all visible at the same time, but that there is always one screen visible at a time.
+
+The loading of XML and CSV data is of course doable, and I will easily implement the game logic after you explain it in more detail.
+
+Since you will record the app using OBS and OBS ninja, I will implement this game not as a web application, but as a normal application that you simply start on your desktop. I presume your computer uses a Windows system?
+
+I'm looking forward working for you! I will communicate with you while developing your app and show you results in-between. 
+
+I have just tried out OBS ninja, it can be used together with non-web applications. 

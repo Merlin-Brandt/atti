@@ -1,0 +1,9 @@
+ * test windows and mac execution
+
+ * background video
+ * game configuration
+ * store already played game states such that they don't repeat
+ * implement right side of round 1
+ * send executables to Maurizio
+ * trova-la-frase phrase must be chosen from new_diodata.txt and then also be editable by non-tech user!
+ * choose widget library

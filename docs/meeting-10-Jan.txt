@@ -1,0 +1,11 @@
+Parts of graphics are overlayed by OBS so that they are not visible by the players. Notes below picture of giocatore.
+
+Configuration before game start of:
+  * initial player time for all players
+  * various time bonuses
+
+Open Source Code!
+
+Video as background.
+
+Will send vorläufige assets heute abend oder morgen
