@@ -1,0 +1,29 @@
+﻿  Building Custom Rule D:/workspace/atti/lib/sfml/src/SFML/Window/CMakeLists.txt
+  Clipboard.cpp
+  Context.cpp
+  Cursor.cpp
+  GlContext.cpp
+  GlResource.cpp
+  Joystick.cpp
+  JoystickManager.cpp
+  Keyboard.cpp
+  Mouse.cpp
+  Touch.cpp
+  Sensor.cpp
+  SensorManager.cpp
+  VideoMode.cpp
+  Window.cpp
+  WindowImpl.cpp
+  CursorImpl.cpp
+  ClipboardImpl.cpp
+  WglContext.cpp
+  WglExtensions.cpp
+  InputImpl.cpp
+  Generating Code...
+  Compiling...
+  JoystickImpl.cpp
+  SensorImpl.cpp
+  VideoModeImpl.cpp
+  WindowImplWin32.cpp
+  Generating Code...
+  sfml-window.vcxproj -> D:\workspace\atti\lib\sfml\build-windows-static\lib\Release\sfml-window-s.lib

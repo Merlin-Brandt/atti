@@ -1,0 +1,37 @@
+﻿  Building Custom Rule D:/workspace/atti/lib/sfml/src/SFML/Graphics/CMakeLists.txt
+  BlendMode.cpp
+  Color.cpp
+  Font.cpp
+  Glsl.cpp
+  GLCheck.cpp
+  GLExtensions.cpp
+  Image.cpp
+  ImageLoader.cpp
+  RenderStates.cpp
+  RenderTexture.cpp
+  RenderTarget.cpp
+  RenderWindow.cpp
+  Shader.cpp
+  Texture.cpp
+  TextureSaver.cpp
+  Transform.cpp
+  Transformable.cpp
+  View.cpp
+  Vertex.cpp
+  GLLoader.cpp
+  Generating Code...
+  Compiling...
+  Shape.cpp
+  CircleShape.cpp
+  RectangleShape.cpp
+  ConvexShape.cpp
+  Sprite.cpp
+  Text.cpp
+  VertexArray.cpp
+  VertexBuffer.cpp
+  RenderTextureImpl.cpp
+  RenderTextureImplFBO.cpp
+  RenderTextureImplDefault.cpp
+  Generating Code...
+     Creating library D:/workspace/atti/lib/sfml/build-windows-dynamic/lib/Release/sfml-graphics.lib and object D:/workspace/atti/lib/sfml/build-windows-dynamic/lib/Release/sfml-graphics.exp
+  sfml-graphics.vcxproj -> D:\workspace\atti\lib\sfml\build-windows-dynamic\lib\Release\sfml-graphics-2.dll

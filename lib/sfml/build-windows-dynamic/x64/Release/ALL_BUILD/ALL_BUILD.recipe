@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>D:\workspace\atti\lib\sfml\build-windows-dynamic\x64\Release\ZERO_CHECK</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\workspace\atti\lib\sfml\build-windows-dynamic\lib\Release\sfml-system-2.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\workspace\atti\lib\sfml\build-windows-dynamic\lib\Release\sfml-audio-2.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\workspace\atti\lib\sfml\build-windows-dynamic\lib\Release\sfml-window-2.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\workspace\atti\lib\sfml\build-windows-dynamic\lib\Release\sfml-graphics-2.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\workspace\atti\lib\sfml\build-windows-dynamic\lib\Release\sfml-network-2.dll</FullPath>
+    </ProjectOutput>
+    <ProjectOutput>
+      <FullPath>D:\workspace\atti\lib\sfml\build-windows-dynamic\x64\Release\ALL_BUILD</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles />
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

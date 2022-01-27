@@ -1,0 +1,10 @@
+^D:\WORKSPACE\ATTI\LIB\SFML\SRC\SFML\MAIN\CMAKELISTS.TXT
+setlocal
+D:\opt\cmake\bin\cmake.exe -SD:/workspace/atti/lib/sfml -BD:/workspace/atti/lib/sfml/build-windows-dynamic --check-stamp-file D:/workspace/atti/lib/sfml/build-windows-dynamic/src/SFML/Main/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
