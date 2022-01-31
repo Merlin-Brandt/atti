@@ -1,5 +1,5 @@
 EXECUTABLE=atti
-SOURCES=$(wildcard src/*.cpp src/*/*.cpp src/*/*/*.cpp)
+SOURCES=src/main.cpp src/pages/pages.cpp
 HEADERS=$(wildcard src/*.hpp src/*/*.hpp src/*/*/*.hpp)
 DOCS_ORDER=src/main.cpp
 SFML_LIBS=lib/sfml/build/lib/libsfml

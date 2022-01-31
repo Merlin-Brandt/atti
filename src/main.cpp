@@ -1,5 +1,6 @@
 #include "main.hpp"
 #include "pages/MainPage.hpp"
+#include <fstream>
 
 umap<string, sf::Texture *> Resources::textures;
 sf::Font Resources::font;
