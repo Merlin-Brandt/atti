@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{162DEA40-FBBC-3E7E-B22F-A85EDA974222}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ZERO_CHECK</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\316b9ed3b9b5b9ab4fc13d825216c71f\generate.stamp.rule">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+D:\opt\cmake\bin\cmake.exe -SD:/workspace/atti/lib/sfml -BD:/workspace/atti/lib/sfml/build-windows-static --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/workspace/atti/lib/sfml/build-windows-static/SFML.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\opt\cmake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeParseArguments.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckTypeSize.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindOpenAL.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindOpenGL.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindPackageMessage.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\opt\cmake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;D:\workspace\atti\lib\sfml\CMakeLists.txt;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeSystem.cmake;D:\workspace\atti\lib\sfml\cmake\Config.cmake;D:\workspace\atti\lib\sfml\cmake\Macros.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindFLAC.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindFreetype.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindVorbis.cmake;D:\workspace\atti\lib\sfml\cmake\SFMLConfig.cmake.in;D:\workspace\atti\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;D:\workspace\atti\lib\sfml\src\SFML\Audio\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Graphics\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Main\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Network\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\System\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Window\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\System\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Main\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Window\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Network\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Graphics\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+D:\opt\cmake\bin\cmake.exe -SD:/workspace/atti/lib/sfml -BD:/workspace/atti/lib/sfml/build-windows-static --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/workspace/atti/lib/sfml/build-windows-static/SFML.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\opt\cmake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeParseArguments.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckTypeSize.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindOpenAL.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindOpenGL.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindPackageMessage.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\opt\cmake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;D:\workspace\atti\lib\sfml\CMakeLists.txt;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeSystem.cmake;D:\workspace\atti\lib\sfml\cmake\Config.cmake;D:\workspace\atti\lib\sfml\cmake\Macros.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindFLAC.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindFreetype.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindVorbis.cmake;D:\workspace\atti\lib\sfml\cmake\SFMLConfig.cmake.in;D:\workspace\atti\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;D:\workspace\atti\lib\sfml\src\SFML\Audio\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Graphics\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Main\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Network\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\System\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Window\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\System\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Main\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Window\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Network\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Graphics\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+D:\opt\cmake\bin\cmake.exe -SD:/workspace/atti/lib/sfml -BD:/workspace/atti/lib/sfml/build-windows-static --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/workspace/atti/lib/sfml/build-windows-static/SFML.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\opt\cmake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeParseArguments.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckTypeSize.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindOpenAL.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindOpenGL.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindPackageMessage.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\opt\cmake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;D:\workspace\atti\lib\sfml\CMakeLists.txt;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeSystem.cmake;D:\workspace\atti\lib\sfml\cmake\Config.cmake;D:\workspace\atti\lib\sfml\cmake\Macros.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindFLAC.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindFreetype.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindVorbis.cmake;D:\workspace\atti\lib\sfml\cmake\SFMLConfig.cmake.in;D:\workspace\atti\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;D:\workspace\atti\lib\sfml\src\SFML\Audio\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Graphics\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Main\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Network\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\System\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Window\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\System\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Main\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Window\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Network\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Graphics\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+D:\opt\cmake\bin\cmake.exe -SD:/workspace/atti/lib/sfml -BD:/workspace/atti/lib/sfml/build-windows-static --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/workspace/atti/lib/sfml/build-windows-static/SFML.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\opt\cmake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCXXInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeCommonLanguageInclude.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeGenericSystem.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeInitializeConfigs.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeLanguageInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeParseArguments.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeRCInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInformation.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CMakeSystemSpecificInitialize.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\CheckTypeSize.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\CMakeCommonCompilerMacros.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\MSVC-C.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Compiler\MSVC-CXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindOpenAL.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindOpenGL.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;D:\opt\cmake\share\cmake-3.22\Modules\FindPackageMessage.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-C.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC-CXX.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows-MSVC.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\Windows.cmake;D:\opt\cmake\share\cmake-3.22\Modules\Platform\WindowsPaths.cmake;D:\opt\cmake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;D:\workspace\atti\lib\sfml\CMakeLists.txt;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeCCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeCXXCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeRCCompiler.cmake;D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\3.22.1\CMakeSystem.cmake;D:\workspace\atti\lib\sfml\cmake\Config.cmake;D:\workspace\atti\lib\sfml\cmake\Macros.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindFLAC.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindFreetype.cmake;D:\workspace\atti\lib\sfml\cmake\Modules\FindVorbis.cmake;D:\workspace\atti\lib\sfml\cmake\SFMLConfig.cmake.in;D:\workspace\atti\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;D:\workspace\atti\lib\sfml\src\SFML\Audio\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Graphics\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Main\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Network\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\System\CMakeLists.txt;D:\workspace\atti\lib\sfml\src\SFML\Window\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\workspace\atti\lib\sfml\build-windows-static\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\System\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Main\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Window\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Network\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Graphics\CMakeFiles\generate.stamp;D:\workspace\atti\lib\sfml\build-windows-static\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

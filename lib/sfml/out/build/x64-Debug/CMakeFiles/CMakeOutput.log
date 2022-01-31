@@ -1,0 +1,97 @@
+The system is: Windows - 10.0.19044 - AMD64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: D:/opt/Visual Studio 2022/VC/Tools/MSVC/14.30.30705/bin/Hostx64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) C/C++ Optimizing Compiler Version 19.30.30709 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+CMakeCCompilerId.c
+Microsoft (R) Incremental Linker Version 14.30.30709.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCCompilerId.exe 
+CMakeCCompilerId.obj 
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.exe"
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.obj"
+
+The C compiler identification is MSVC, found in "D:/workspace/atti/lib/sfml/out/build/x64-Debug/CMakeFiles/3.21.21080301-MSVC_2/CompilerIdC/CMakeCCompilerId.exe"
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+Compiler: D:/opt/Visual Studio 2022/VC/Tools/MSVC/14.30.30705/bin/Hostx64/x64/cl.exe 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+Microsoft (R) C/C++ Optimizing Compiler Version 19.30.30709 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+CMakeCXXCompilerId.cpp
+Microsoft (R) Incremental Linker Version 14.30.30709.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+/out:CMakeCXXCompilerId.exe 
+CMakeCXXCompilerId.obj 
+
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.exe"
+
+Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.obj"
+
+The CXX compiler identification is MSVC, found in "D:/workspace/atti/lib/sfml/out/build/x64-Debug/CMakeFiles/3.21.21080301-MSVC_2/CompilerIdCXX/CMakeCXXCompilerId.exe"
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: D:/workspace/atti/lib/sfml/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/opt/Visual Studio 2022/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_2624e && [1/2] Building C object CMakeFiles\cmTC_2624e.dir\CMakeCCompilerABI.c.obj
+[2/2] Linking C executable cmTC_2624e.exe
+
+
+
+Detecting CXX compiler ABI info compiled with the following output:
+Change Dir: D:/workspace/atti/lib/sfml/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/opt/Visual Studio 2022/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_829ae && [1/2] Building CXX object CMakeFiles\cmTC_829ae.dir\CMakeCXXCompilerABI.cpp.obj
+[2/2] Linking CXX executable cmTC_829ae.exe
+
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: D:/workspace/atti/lib/sfml/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/opt/Visual Studio 2022/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_cb600 && [1/2] Building C object CMakeFiles\cmTC_cb600.dir\CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_cb600.exe
+
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: D:/workspace/atti/lib/sfml/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/opt/Visual Studio 2022/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_508e9 && [1/2] Building C object CMakeFiles\cmTC_508e9.dir\CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_508e9.exe
+
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: D:/workspace/atti/lib/sfml/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/opt/Visual Studio 2022/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_419df && [1/2] Building C object CMakeFiles\cmTC_419df.dir\CheckIncludeFile.c.obj
+[2/2] Linking C executable cmTC_419df.exe
+
+
+
+Determining size of void* passed with the following output:
+Change Dir: D:/workspace/atti/lib/sfml/out/build/x64-Debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):D:/opt/Visual Studio 2022/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe cmTC_a1582 && [1/2] Building C object CMakeFiles\cmTC_a1582.dir\SIZEOF_VOID_PTR.c.obj
+[2/2] Linking C executable cmTC_a1582.exe
+
+
+

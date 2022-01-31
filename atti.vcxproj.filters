@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pages\pages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\pages\Card.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pages\MainPage.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pages\SecondsParticle.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\pages\TrovaLaFrase.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gui\button.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\resources.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="res\font.otf">
+      <Filter>Resource Files</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="res\sound.wav">
+      <Filter>Resource Files</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\1x\+1m.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+1s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+2m.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+2s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+3m.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+3s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+4s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+5s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+6s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+7s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+8s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+9s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\+10s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-1m.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-1s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-2m.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-2s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-3m.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-3s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-4s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-5s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-6s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-7s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-8s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-9s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-10s.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\a-active.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\a-inactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\card-active.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\card-hide.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\card-inactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\dono-active.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\e-active.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\e-inactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\i-active.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\-inactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\ivelazione-selected.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\minute.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\o-active.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\o-inactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\parola-deactived.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\parola-selected.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\passa-active.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\passa-clicked.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\passa-disable.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\player frame normal.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\player-advanced.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\player-challange.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\player-suspended.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\potenza-deactived.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\potenza-selected.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\rivelazione-deactived.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\second.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\sfida-active.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\sfida-clicked.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\sfida-disable.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\tentazione-deactived.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\tentazione-selected.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\u-active.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\1x\u-inactive.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
