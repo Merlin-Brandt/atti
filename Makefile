@@ -1,10 +1,10 @@
-EXECUTABLE=atti
-SOURCES=src/main.cpp src/pages/pages.cpp
+EXECUTABLE=install/atti
+SOURCES=src/main.cpp src/pages/pages.cpp src/pages/TrovaLaFrase.cpp src/gui/button.cpp
 HEADERS=$(wildcard src/*.hpp src/*/*.hpp src/*/*/*.hpp)
 DOCS_ORDER=src/main.cpp
 SFML_LIBS=lib/sfml/build/lib/libsfml
 CC=g++
-CFLAGS=
+CFLAGS=-std=c++17
 #LDFLAGS=-static -static-libgcc -static-libstdc++ $(SFML_LIBS)-audio-s.a $(SFML_LIBS)-graphics-s.a $(SFML_LIBS)-window-s.a $(SFML_LIBS)-system-s.a
 LDFLAGS=-lsfml-audio -lsfml-graphics -lsfml-window -lsfml-system
 
