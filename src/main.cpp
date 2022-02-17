@@ -11,7 +11,7 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1600, 800), "SFML window");
     // Load a sprite to display
     sf::Texture texture;
-    if (!texture.loadFromFile("res/1x/tentazione-selected.png"))
+    if (!texture.loadFromFile("res/img/1x/tentazione-selected.png"))
         return EXIT_FAILURE;
     sf::Sprite sprite(texture);
     // Create a graphical text to display
@@ -26,9 +26,56 @@ int main()
     // Play the music
     //music.play();
 
+    pages::Main::Params params;
+
+    std::ifstream config_in("res/config.txt");
+    string used_titles_num;
+    getline(config_in, used_titles_num);
+    for (int i = 0; i < stoi(used_titles_num); ++i)
+    {
+        string ignore;
+        getline(config_in, ignore);
+    }
+    for (int i = 0; i < NUM_PLAYERS; ++i)
+    {
+        getline(config_in, params.giocatori_nome[i]);
+        getline(config_in, params.giocatori_notizia[i]);
+    }
+    for (string name : {
+        "tempo_iniziale",
+        "tempo_manche[0]", //todo
+        "tempo_manche[1]", //todo
+        "tempo_manche[2]", //todo
+        "tempo_sfida[0].aggiunto",  //todo
+        "tempo_sfida[0].sottrato",  //todo
+        "tempo_sfida[1].aggiunto",  //todo
+        "tempo_sfida[1].sottrato", //todo
+        "tempo_tentazione",  //todo
+        "tempo_giusto",
+        "tempo_errore", //todo
+        "tempo_errore_risolvi",  //todo
+        "tempo_slide",  //todo
+        "tempo_suspance",  //todo
+        "tempo_alert",  //todo
+        "tempo_azione",  //todo
+        "tempo_pausa_azione" //todo
+    }) {
+        string line;
+        getline(config_in, line);
+        params.other_values.insert(std::make_pair(name, stoi(line)));
+    }
+    char board[BOARD_W][BOARD_H];
+    for (int j = 0; j < BOARD_H; ++j)
+    for (int i = 0; i < BOARD_W; ++i)
+    {
+        string ch;
+        getline(config_in, ch);
+        params.board[i][j] = toupper(ch[0]);
+    }
+
     Resources::init();
     pages::Main::init();
-    pages::Main mainPage;
+    pages::Main mainPage(params);
 
     sf::Clock clock;
     sf::Time lag = sf::microseconds(0);

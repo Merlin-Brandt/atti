@@ -10,10 +10,18 @@ public:
     sf::Texture *time_minus_10s, *time_plus_10s;
 
     static
+    sf::Texture *seconds_texture(int seconds)
+    {
+        string sign = seconds >= 0 ? "+" : "-";
+        string absval = to_string(abs(seconds));
+        return Resources::texture("res/img/1x/" + sign + absval + "s.png");
+    }
+
+    static
     void init()
     {
-        time_minus_10s = Resources::texture("res/1x/-10s.png");
-        time_plus_10s = Resources::texture("res/1x/+10s.png");
+        time_minus_10s = Resources::texture("res/img/1x/-10s.png");
+        time_plus_10s = Resources::texture("res/img/1x/+10s.png");
     }
 
     sf::Sprite sprite;

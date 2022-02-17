@@ -3,8 +3,7 @@
         {
             "name": "Linux",
             "includePath": [
-                "${default}",
-                "${workspaceFolder}/lib/nanogui/include"
+                "${default}"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",

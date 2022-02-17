@@ -3,12 +3,37 @@
 
 #include "main.hpp"
 
+template <typename Key, typename T>
+using umap = unordered_map<Key, T>;
+
 class Resources
 {
     static
     umap<string, sf::Texture *> textures;
 public:
-    static sf::Font font;
+    static 
+    sf::Font font;
+
+    [[deprecated]]
+    static
+    sf::Text create_text(string txt)
+    {
+        sf::Text text(txt, font);
+        text.setFillColor(sf::Color::White);
+        text.setOutlineColor(sf::Color::Black);
+        text.setOutlineThickness(3);
+        return text;
+    }
+
+    static
+    sf::Text *create_new_text(string txt)
+    {
+        sf::Text *text = new sf::Text(txt, font);
+        text->setFillColor(sf::Color::White);
+        text->setOutlineColor(sf::Color::Black);
+        text->setOutlineThickness(3);
+        return text;
+    }
 
     static
     void init()
