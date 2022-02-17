@@ -1,4 +1,5 @@
 #include "main.hpp"
+#include "resources.hpp"
 #include "pages/MainPage.hpp"
 #include <fstream>
 
@@ -9,22 +10,6 @@ int main()
 {
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(1600, 800), "SFML window");
-    // Load a sprite to display
-    sf::Texture texture;
-    if (!texture.loadFromFile("res/1x/tentazione-selected.png"))
-        return EXIT_FAILURE;
-    sf::Sprite sprite(texture);
-    // Create a graphical text to display
-    sf::Font font;
-    if (!font.loadFromFile("res/font.otf"))
-        return EXIT_FAILURE;
-    sf::Text text("Hello SFML", font, 50);
-    // Load a music to play
-    sf::Music music;
-    if (!music.openFromFile("res/sound.wav"))
-        return EXIT_FAILURE;
-    // Play the music
-    //music.play();
 
     Resources::init();
     pages::Main::init();
