@@ -11,8 +11,6 @@ int main()
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(1600, 800), "SFML window");
 
-    std::cout << Resources::config_filename().c_str() << std::endl;
-    
     pages::Main::Params params;
 
     std::ifstream config_in(Resources::config_filename());
@@ -60,8 +58,6 @@ int main()
         params.board[i][j] = toupper(ch[0]);
     }
     
-    std::cout << "D2\n";
-
     Resources::init();
     pages::Main::init();
     pages::Main mainPage(params);

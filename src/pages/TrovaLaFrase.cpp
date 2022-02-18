@@ -57,6 +57,38 @@ TrovaLaFrase::TrovaLaFrase(Main *a_mainpage) : mainpage(a_mainpage)
     int cards_right = cards_x_offset + (card_size.x+gap) * BOARD_W;
     int cards_bottom = cards_y_offset + (card_size.y+gap) * BOARD_H; 
 
+    update_callbacks.push_back([=] (sf::RenderWindow &window, float elapsed_time)
+    {
+        //std::cout << "D1\n";
+        auto mousePos = sf::Mouse::getPosition(window);
+        auto board = sf::IntRect(cards_x_offset, cards_y_offset, cards_right-cards_x_offset, cards_bottom-cards_y_offset);
+        if (board.contains(mousePos))
+        {
+            //std::cout << "D2\n";
+            int card_x = (mousePos.x-cards_x_offset) / (card_size.x+gap);
+            int card_y = (mousePos.y-cards_y_offset) / (card_size.y+gap); 
+            auto card_rect = sf::IntRect(
+                cards_x_offset + card_x * (card_size.x+gap),
+                cards_y_offset + card_y * (card_size.y+gap),
+                card_size.x, card_size.y
+            );
+            if (card_rect.contains(mousePos) && card_x > 0 && card_y > 0 && card_x < BOARD_W && card_y < BOARD_H)
+            {
+                //std::cout << "D3\n";
+                if (sf::Mouse::isButtonPressed(sf::Mouse::Button::Left) && !cards[card_x][card_y].isShown())
+                {
+                    //std::cout << "D4\n";
+                    cards[card_x][card_y].show();
+                }
+                else
+                {
+                    //std::cout << "D5\n";
+                    cards[card_x][card_y].highlight();
+                }
+            }
+        }
+    });
+
     int vocals_x = 0;
     int vocals_y = 20;
     int vocals_stride = 65;
@@ -109,7 +141,7 @@ TrovaLaFrase::TrovaLaFrase(Main *a_mainpage) : mainpage(a_mainpage)
             ->construct();
 
         if (is_vocal)
-            letters[i]->disable();
+            ;//letters[i]->disable();
     }
 
     player_frame.setTexture(*Resources::texture("res/img/player-frame-normal.png"));
@@ -120,55 +152,67 @@ TrovaLaFrase::TrovaLaFrase(Main *a_mainpage) : mainpage(a_mainpage)
     int player_frame_right = player_frame.getPosition().x + player_frame.getTexture()->getSize().x * sc;
     int player_frame_left = player_frame.getPosition().x;
 
-    int notizia_font_size = 30;
-    string notizia = mainpage->params.giocatori_notizia[mainpage->current_player];
-    // insert linebreaks
-    int i = -1, line_start = 0;
-    while ((i = notizia.find(' ', i + 1)) != string::npos)
-    {
-        int word_end = notizia.find(' ', i + 1);
-        if (word_end == string::npos) word_end = notizia.length();
-        //if (string_width(notizia.substr(line_start, word_end), notizia_font_size) > 340*sc)
-        if (word_end - line_start > 20)
-            notizia.insert(i, "\n"),
-            line_start = ++i;
-    }
-    player_frame_note = Resources::create_text(notizia);
-    player_frame_note.setPosition(player_frame.getPosition());
-    player_frame_note.setCharacterSize(notizia_font_size);
-    player_frame_note.move(55*sc, 115*sc);
+    next_player = [=] () {
+        auto mainpage = this->mainpage;
+        auto player_frame_note = &this->player_frame_note;
+        auto player_frame_name = &this->player_frame_name;
 
-    int name_font_size = 30;
-    string name = mainpage->params.giocatori_nome[mainpage->current_player];
-    player_frame_name = Resources::create_text(name);
-    player_frame_name.setCharacterSize(name_font_size);
-    player_frame_name.setPosition(player_frame.getPosition());
-    player_frame_name.move(240*sc, 660*sc);
-    player_frame_name.move(-string_width(name, name_font_size) / 2, 0);
+        mainpage->current_player = (mainpage->current_player + 1) % NUM_PLAYERS;
+
+        int notizia_font_size = 30;
+        string notizia = mainpage->params.giocatori_notizia[mainpage->current_player];
+        // insert linebreaks
+        int i = -1, line_start = 0;
+        while ((i = notizia.find(' ', i + 1)) != string::npos)
+        {
+            int word_end = notizia.find(' ', i + 1);
+            if (word_end == string::npos) word_end = notizia.length();
+            //if (string_width(notizia.substr(line_start, word_end), notizia_font_size) > 340*sc)
+            if (word_end - line_start > 20)
+                notizia.insert(i, "\n"),
+                line_start = ++i;
+        }
+        *player_frame_note = Resources::create_text(notizia);
+        player_frame_note->setPosition(this->player_frame.getPosition());
+        player_frame_note->setCharacterSize(notizia_font_size);
+        player_frame_note->move(55*sc, 115*sc);
+
+        int name_font_size = 30;
+        string name = mainpage->params.giocatori_nome[mainpage->current_player];
+        *player_frame_name = Resources::create_text(name);
+        player_frame_name->setCharacterSize(name_font_size);
+        player_frame_name->setPosition(this->player_frame.getPosition());
+        player_frame_name->move(240*sc, 660*sc);
+        player_frame_name->move(-string_width(name, name_font_size) / 2, 0);
+    };
+    
+    mainpage->current_player = NUM_PLAYERS-1;
+    next_player();
 
     player_frame_time = Resources::create_text("00:00");
     player_frame_time.setPosition(player_frame.getPosition());
     player_frame_time.move(200*sc, 10*sc);
 
-    auto create_button = [=] (string title) 
+    auto create_button = [=] (int buttons_x, string title) 
     {
+        int fontsize = 30;
         return Button::with_()
-            ->bounds(sf::IntRect(player_frame_left, player_frame_bottom + 15, 60, 60))
+            ->bounds(sf::IntRect(buttons_x, player_frame_bottom + 15, int(string_width(title, fontsize) * 1.2), fontsize))
             ->no_mouse([=] {
                 with_ptr(Resources::create_new_text(title));
-                _->setPosition(player_frame_left, player_frame_bottom + 15);
+                _->setPosition(buttons_x, player_frame_bottom + 15);
                 return _;
             }())
             ->mouse_over([=] {
                 with_ptr(Resources::create_new_text(title));
                 _->setFillColor(sf::Color(YELLOW));
-                _->setPosition(player_frame_left, player_frame_bottom + 15);
+                _->setPosition(buttons_x, player_frame_bottom + 15);
                 return _;
             }())
             ->mouse_down([=] {
                 with_ptr(Resources::create_new_text(title));
                 _->setFillColor(sf::Color(255, 255, 255));
-                _->setPosition(player_frame_left, player_frame_bottom + 15);
+                _->setPosition(buttons_x, player_frame_bottom + 15);
                 return _;
             }())
             ->relative()
@@ -176,8 +220,9 @@ TrovaLaFrase::TrovaLaFrase(Main *a_mainpage) : mainpage(a_mainpage)
     };
 
     // todo memory leak
-    play_button = *create_button("PAUSE");
-    pause_button = *create_button("PLAY");
+    play_button = *create_button(player_frame_left + 10, "PAUSE");
+    pause_button = *create_button(player_frame_left + 10, "PLAY");
+    next_player_button = *create_button(player_frame_left + 110, "NEXT PLAYER");
 }
 
 void TrovaLaFrase::update(sf::RenderWindow &target, float time)
@@ -186,6 +231,7 @@ void TrovaLaFrase::update(sf::RenderWindow &target, float time)
         mainpage->giocatori_tempi[mainpage->current_player] -= time;
 
     debug_last_click += time;
+
     if (play_or_pause->click_event(target) && debug_last_click > .2)
     {
         debug_last_click = 0;
@@ -197,6 +243,13 @@ void TrovaLaFrase::update(sf::RenderWindow &target, float time)
             player_frame_time.setFillColor(sf::Color::Green);
     }
 
+    if (next_player_button.click_event(target) && debug_last_click > .2)
+    {
+        debug_last_click = 0;
+
+        next_player();
+    }
+
     int secs = (int)mainpage->giocatori_tempi[mainpage->current_player];
     auto leading_zero = [] (int i) {
         string s = to_string(i);
@@ -206,6 +259,13 @@ void TrovaLaFrase::update(sf::RenderWindow &target, float time)
             return s;
     };
     player_frame_time.setString(leading_zero(secs/60) + ":" + leading_zero(secs % 60));
+
+    for (int i = 0; i < BOARD_W; ++i)
+    for (int j = 0; j < BOARD_H; ++j)
+        cards[i][j].unhighlight();
+
+    for (auto callback : update_callbacks)
+        callback(target, time);
 
     for (int i = 0; i < letters_n; ++i)
     {
@@ -231,25 +291,19 @@ void TrovaLaFrase::update(sf::RenderWindow &target, float time)
 
 void TrovaLaFrase::letterClicked(char c)
 {
+    if (guessed_letters.find(c) != guessed_letters.end())
+        return;
+
     ((sf::Text *) letters[c - 'A']->state_sprites[Button::State::NO_MOUSE])
         ->setFillColor(sf::Color(YELLOW));
 
-    for (int i = 0; i < BOARD_W; ++i)
-    for (int j = 0; j < BOARD_H; ++j)
-    {
-        if (cards[i][j].getChar() == c && cards[i][j].isShown())
-            return; // ensure(letter not already guessed)
-    }
-
     bool correct = false;
-    bool already_guessed = false;
     for (int i = 0; i < BOARD_W; ++i)
     for (int j = 0; j < BOARD_H; ++j)
     {
         cards[i][j].setCharColor(sf::Color(0, 0, 0));
-        if (cards[i][j].getChar() == c)
+        if (cards[i][j].getChar() == c && !cards[i][j].isShown())
         {
-            // require(letter not already guessed)
             cards[i][j].setCharColor(sf::Color(YELLOW));
             //cards[i][j].setLabelVisibility(true);
             cards[i][j].show();
@@ -257,7 +311,6 @@ void TrovaLaFrase::letterClicked(char c)
         }
     }
     
-    // require(letter not already guessed)
     int timechange = correct ? mainpage->params.other_values["tempo_giusto"] : -mainpage->params.other_values["tempo_errore"];
     mainpage->giocatori_tempi[mainpage->current_player] += timechange;
 
@@ -270,4 +323,6 @@ void TrovaLaFrase::letterClicked(char c)
         letter_bounds.left, 
         letter_bounds.top - SecondsParticle::time_minus_10s->getSize().y + 30
     ));
+
+    guessed_letters.insert(c);
 }

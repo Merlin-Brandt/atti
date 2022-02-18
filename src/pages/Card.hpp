@@ -33,6 +33,7 @@ private:
     sf::Text label;
     bool shown = false;
     sf::Sprite sprite;
+    sf::Sprite highlighted_sprite_buf, *highlighted_sprite = 0;
 public:
 
     static
@@ -130,9 +131,23 @@ public:
         label.setScale(x, y);
     }
 
+    void highlight()
+    {
+        highlighted_sprite_buf = sprite;
+        highlighted_sprite_buf.setColor(sf::Color(255, 255, 255, 0xAA));
+        highlighted_sprite = &highlighted_sprite_buf;
+    }
+
+    void unhighlight()
+    {
+        highlighted_sprite = 0;
+    }
+
     void draw(sf::RenderWindow &window) const
     {
         window.draw(sprite);
+        if (highlighted_sprite)
+            window.draw(*highlighted_sprite);
         if (isShown()) 
         {
             window.draw(label);

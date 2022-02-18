@@ -28,9 +28,10 @@ public:
     sf::Text create_text(string txt)
     {
         sf::Text text(txt, font);
-        text.setFillColor(sf::Color::White);
-        text.setOutlineColor(sf::Color::Black);
-        text.setOutlineThickness(3);
+        text.setFillColor(sf::Color::Black);
+        text.setStyle(sf::Text::Bold);
+        //text.setOutlineColor(sf::Color::Black);
+        //text.setOutlineThickness(3);
         return text;
     }
 

@@ -1,27 +1,29 @@
+communication 1:30
+future prjs and sharing faith 0:45
+
+round1 12:35   
+  config 4:50
+  mac-compilation
+
 14. Feb
--------
-14:00-14:30 communication
-14:30-15:14 future projects and sharing faith
+communication
+future projects and sharing faith
 
-15. Feb round1 3:15
--------
-11:25-14:35 implementation of round1 config
+15. Feb
+round1.config
 
-16. Feb round1 4:08
--------
-00:20-1:54 finished round1 config
-15min of renewing mega.nz subscription
+16. Feb
+round1.config
+round1
 
-12:20-15:28 development of round1
-5min of checking emails
-15min of checking twitter
-
-17. Feb round1 5:15
--------
-10:40-13:25 development of round1
-5min of checking hamburg anmeldung termin
-
-15:00-17:30 finalize basic version of round1
+17. Feb
+round1
+finalize basic round1
 
 18. Feb
-------- 
+-------
+round1.mac-compilation 
+12:55-17:30
+30min of tweaking some bugs
+
+19:00- replacement features

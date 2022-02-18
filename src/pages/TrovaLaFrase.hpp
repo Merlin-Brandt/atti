@@ -23,7 +23,13 @@ public:
     sf::Sprite player_frame;
     sf::Text player_frame_note, player_frame_name, player_frame_time;
     Button play_button, pause_button, *play_or_pause = &pause_button;
+    Button next_player_button;
     float debug_last_click = 0.0f;
+
+    set<char> guessed_letters;
+
+    vector<function<void(sf::RenderWindow &, float)>> update_callbacks;
+    function<void(void)> next_player;
 
     std::vector<SecondsParticle> particles;
     Animation letters_anim;
@@ -61,6 +67,7 @@ public:
         target.draw(player_frame_name);
         target.draw(player_frame_time);
         play_or_pause->draw(target, states);
+        ((Button *)&next_player_button)->draw(target, states);
 
         for (SecondsParticle const &p : particles)
         {
