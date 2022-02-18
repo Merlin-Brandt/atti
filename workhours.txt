@@ -1,9 +1,10 @@
 communication 1:30
 future prjs and sharing faith 0:45
 
-round1 12:35   
-  config 4:50
-  mac-compilation
+round1 14:55   
+  config 4:20
+  
+mac-compilation 4:30
 
 14. Feb
 communication
@@ -23,7 +24,6 @@ finalize basic round1
 18. Feb
 -------
 round1.mac-compilation 
-12:55-17:30
-30min of tweaking some bugs
+round1
+round1 20:50-
 
-19:00- replacement features

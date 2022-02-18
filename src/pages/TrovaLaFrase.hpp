@@ -24,6 +24,7 @@ public:
     sf::Text player_frame_note, player_frame_name, player_frame_time;
     Button play_button, pause_button, *play_or_pause = &pause_button;
     Button next_player_button;
+    Button remove_time;
     float debug_last_click = 0.0f;
 
     set<char> guessed_letters;
@@ -46,6 +47,7 @@ public:
         }
     }
 
+    void changetime(float time, int particleX, int particleY, bool);
     void letterClicked(char c);
     void update(sf::RenderWindow &target, float time);
 
@@ -68,6 +70,7 @@ public:
         target.draw(player_frame_time);
         play_or_pause->draw(target, states);
         ((Button *)&next_player_button)->draw(target, states);
+        ((Button *)&remove_time)->draw(target, states);
 
         for (SecondsParticle const &p : particles)
         {

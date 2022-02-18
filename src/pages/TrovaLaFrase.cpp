@@ -193,26 +193,26 @@ TrovaLaFrase::TrovaLaFrase(Main *a_mainpage) : mainpage(a_mainpage)
     player_frame_time.setPosition(player_frame.getPosition());
     player_frame_time.move(200*sc, 10*sc);
 
-    auto create_button = [=] (int buttons_x, string title) 
+    auto create_button = [=] (int button_y, string title) 
     {
         int fontsize = 30;
         return Button::with_()
-            ->bounds(sf::IntRect(buttons_x, player_frame_bottom + 15, int(string_width(title, fontsize) * 1.2), fontsize))
+            ->bounds(sf::IntRect(player_frame_left + 30, button_y, int(string_width(title, fontsize) * 1.2), fontsize))
             ->no_mouse([=] {
                 with_ptr(Resources::create_new_text(title));
-                _->setPosition(buttons_x, player_frame_bottom + 15);
+                _->setPosition(player_frame_left + 30, button_y);
                 return _;
             }())
             ->mouse_over([=] {
                 with_ptr(Resources::create_new_text(title));
                 _->setFillColor(sf::Color(YELLOW));
-                _->setPosition(buttons_x, player_frame_bottom + 15);
+                _->setPosition(player_frame_left + 30, button_y);
                 return _;
             }())
             ->mouse_down([=] {
                 with_ptr(Resources::create_new_text(title));
                 _->setFillColor(sf::Color(255, 255, 255));
-                _->setPosition(buttons_x, player_frame_bottom + 15);
+                _->setPosition(player_frame_left + 30, button_y);
                 return _;
             }())
             ->relative()
@@ -220,9 +220,10 @@ TrovaLaFrase::TrovaLaFrase(Main *a_mainpage) : mainpage(a_mainpage)
     };
 
     // todo memory leak
-    play_button = *create_button(player_frame_left + 10, "PAUSE");
-    pause_button = *create_button(player_frame_left + 10, "PLAY");
-    next_player_button = *create_button(player_frame_left + 110, "NEXT PLAYER");
+    play_button = *create_button(player_frame_bottom - 100, "PAUSE");
+    pause_button = *create_button(player_frame_bottom - 100, "PLAY");
+    next_player_button = *create_button(player_frame_bottom - 130, "NEXT PLAYER");
+    remove_time = *create_button(player_frame_bottom - 160, "REMOVE TIME");
 }
 
 void TrovaLaFrase::update(sf::RenderWindow &target, float time)
@@ -248,6 +249,14 @@ void TrovaLaFrase::update(sf::RenderWindow &target, float time)
         debug_last_click = 0;
 
         next_player();
+    }
+
+    if (remove_time.click_event(target) && debug_last_click > .2)
+    {
+        debug_last_click = 0;
+
+        bool texture_available_for_timechange = true;
+        changetime(-5, player_frame.getPosition().x - 25, player_frame.getPosition().y, texture_available_for_timechange);  
     }
 
     int secs = (int)mainpage->giocatori_tempi[mainpage->current_player];
@@ -289,6 +298,14 @@ void TrovaLaFrase::update(sf::RenderWindow &target, float time)
         }
 }
 
+void TrovaLaFrase::changetime(float timechange, int particleX, int particleY, bool texture_available_for_timechange)
+{
+    mainpage->giocatori_tempi[mainpage->current_player] += timechange;
+
+    // require(texture_available_for_timechange)
+    particles.push_back( SecondsParticle(SecondsParticle::seconds_texture(timechange), particleX, particleY));
+}
+
 void TrovaLaFrase::letterClicked(char c)
 {
     if (guessed_letters.find(c) != guessed_letters.end())
@@ -312,17 +329,13 @@ void TrovaLaFrase::letterClicked(char c)
     }
     
     int timechange = correct ? mainpage->params.other_values["tempo_giusto"] : -mainpage->params.other_values["tempo_errore"];
-    mainpage->giocatori_tempi[mainpage->current_player] += timechange;
-
-    auto letter_bounds = letters[c - 'A']->bounds;
-    particles.push_back( SecondsParticle
-    (
-        // require(resource available for tempo_giusto)
-        // require(resource available for tempo_errore)
-        SecondsParticle::seconds_texture(timechange), 
-        letter_bounds.left, 
-        letter_bounds.top - SecondsParticle::time_minus_10s->getSize().y + 30
-    ));
-
+    // require(resource available for tempo_giusto)
+    // require(resource available for tempo_errore)    
+    bool texture_available_for_timechange = true;
+    changetime(timechange, 
+        letters[c - 'A']->bounds.left, 
+        letters[c - 'A']->bounds.top - SecondsParticle::time_minus_10s->getSize().y + 30, 
+        texture_available_for_timechange
+    );
     guessed_letters.insert(c);
 }
