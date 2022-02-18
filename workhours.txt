@@ -16,10 +16,12 @@
 5min of checking emails
 15min of checking twitter
 
-17. Feb round1 2:45
+17. Feb round1 5:15
 -------
 10:40-13:25 development of round1
 5min of checking hamburg anmeldung termin
 
-so far on round1: 10:08
-15:00- finalize basic version of round1
+15:00-17:30 finalize basic version of round1
+
+18. Feb
+------- 
