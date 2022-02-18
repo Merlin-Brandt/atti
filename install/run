@@ -1,6 +1,0 @@
-clear
-rm atti
-cd ..
-make
-cd install
-./atti

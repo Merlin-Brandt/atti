@@ -11,9 +11,11 @@ int main()
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(1600, 800), "SFML window");
 
+    std::cout << Resources::config_filename().c_str() << std::endl;
+    
     pages::Main::Params params;
 
-    std::ifstream config_in("res/config.txt");
+    std::ifstream config_in(Resources::config_filename());
     string used_titles_num;
     getline(config_in, used_titles_num);
     for (int i = 0; i < stoi(used_titles_num); ++i)
@@ -57,6 +59,8 @@ int main()
         getline(config_in, ch);
         params.board[i][j] = toupper(ch[0]);
     }
+    
+    std::cout << "D2\n";
 
     Resources::init();
     pages::Main::init();

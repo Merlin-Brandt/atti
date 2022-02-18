@@ -35,7 +35,7 @@ public:
     int current_player = 0;
 
     Main(Params a_params) : params(a_params), trovaLaFrase(this) {
-        std::cout << "TEMPO INIZIALE " << params.other_values["tempo_iniziale"] << std::endl;
+        std::cout << "D3\n";
         for (int i = 0; i < NUM_PLAYERS; ++i)
             giocatori_tempi[i] = params.other_values["tempo_iniziale"];
     }

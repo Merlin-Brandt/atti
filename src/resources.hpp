@@ -2,6 +2,7 @@
 #define RESOURCES_HPP
 
 #include "main.hpp"
+#include "path.hpp"
 #if __APPLE__
 #include "apple/ResourcePath.hpp"
 #endif
@@ -9,17 +10,14 @@
 class Resources
 {
     static
-    unordered_map<string, sf::Texture *> textures;
+    unordered_map<string, class sf::Texture *> textures;
     
 public:
+    [[deprecated]]
     static
     std::string path()
     {
-#if __APPLE__
-        return apple_ResourcePath();
-#else
-        return std::string("./");
-#endif
+        return ::path();
     }
     
     static 
@@ -50,6 +48,12 @@ public:
     void init()
     {
         font.loadFromFile(path() + "res/font.otf");
+    }
+    
+    static
+    string config_filename()
+    {
+        return(path() + "res/config.txt");
     }
 
     static
