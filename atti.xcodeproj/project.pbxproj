@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13D9AE5527BFCC6600DDA810 /* button.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13D9AE5427BFCC6600DDA810 /* button.cpp */; };
+		13D9AE5727BFCC7B00DDA810 /* TrovaLaFrase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13D9AE5627BFCC7B00DDA810 /* TrovaLaFrase.cpp */; };
 		8F1B874627A878D4001AD7CA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1B874527A878D4001AD7CA /* main.cpp */; };
 		8F1B874927A878EA001AD7CA /* pages.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F1B874827A878EA001AD7CA /* pages.cpp */; };
 		8F33BB7827AA90AB0099D624 /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8F33BB7727AA90AB0099D624 /* ResourcePath.mm */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13D9AE5427BFCC6600DDA810 /* button.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = button.cpp; path = src/gui/button.cpp; sourceTree = "<group>"; };
+		13D9AE5627BFCC7B00DDA810 /* TrovaLaFrase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TrovaLaFrase.cpp; path = src/pages/TrovaLaFrase.cpp; sourceTree = "<group>"; };
 		8F1B871127A869A6001AD7CA /* atti.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = atti.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1B873127A874ED001AD7CA /* readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.txt; sourceTree = "<group>"; };
 		8F1B873C27A8771C001AD7CA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		8F1B870727A869A6001AD7CA = {
 			isa = PBXGroup;
 			children = (
+				13D9AE5627BFCC7B00DDA810 /* TrovaLaFrase.cpp */,
+				13D9AE5427BFCC6600DDA810 /* button.cpp */,
 				8F33BB7727AA90AB0099D624 /* ResourcePath.mm */,
 				8F33BB7227AA8E040099D624 /* res */,
 				8F1B874827A878EA001AD7CA /* pages.cpp */,
@@ -146,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13D9AE5727BFCC7B00DDA810 /* TrovaLaFrase.cpp in Sources */,
+				13D9AE5527BFCC6600DDA810 /* button.cpp in Sources */,
 				8F33BB7827AA90AB0099D624 /* ResourcePath.mm in Sources */,
 				8F1B874927A878EA001AD7CA /* pages.cpp in Sources */,
 				8F1B874627A878D4001AD7CA /* main.cpp in Sources */,
@@ -251,6 +259,7 @@
 				DEVELOPMENT_TEAM = B2BMMC35HP;
 				INFOPLIST_FILE = "atti-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
@@ -264,6 +273,7 @@
 				DEVELOPMENT_TEAM = B2BMMC35HP;
 				INFOPLIST_FILE = "atti-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};

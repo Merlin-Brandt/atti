@@ -6,13 +6,10 @@
 #include "apple/ResourcePath.hpp"
 #endif
 
-template <typename Key, typename T>
-using umap = unordered_map<Key, T>;
-
 class Resources
 {
     static
-    umap<string, sf::Texture *> textures;
+    unordered_map<string, sf::Texture *> textures;
     
 public:
     static
