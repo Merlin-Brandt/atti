@@ -1,1 +1,1 @@
-new_diodati_titles.txt.noaccenti
+new_diodati_titles.txt.short.senzaaccenti

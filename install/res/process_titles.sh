@@ -1,0 +1,2 @@
+cat new_diodati_titles.txt.long.conaccenti | sedrn '/[a-zA-Z0-9'"'"']{12,50}/!p' > new_diodati_titles.txt.short.conaccenti
+cat new_diodati_titles.txt.short.conaccenti | sedrn '/[ùàòìÀÒÙÌáúóíÁÓÚÍ]/!p' > new_diodati_titles.txt.short.senzaaccenti
