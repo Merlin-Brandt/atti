@@ -48,13 +48,13 @@ public:
     static
     void init()
     {
-        font.loadFromFile(path() + "res/font.otf");
+        font.loadFromFile(::path() + "res/font.otf");
     }
     
     static
     string config_filename()
     {
-        return(path() + "res/config.txt");
+        return(config_path() + "/config.txt");
     }
 
     static
@@ -67,7 +67,7 @@ public:
         else
         {
             sf::Texture *new_texture = new sf::Texture();
-            if (!new_texture->loadFromFile(path() + filename))
+            if (!new_texture->loadFromFile(::path() + filename))
             {
                 textures.insert({filename, 0});
                 delete new_texture;

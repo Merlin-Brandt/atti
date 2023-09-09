@@ -12,7 +12,12 @@ int main()
     sf::RenderWindow window(sf::VideoMode(1600, 800), "SFML window");
 
     pages::Main::Params params;
-
+    
+    {
+        std::ofstream debug_out("debug.txt");
+        debug_out << "Config filename: " << Resources::config_filename() << "\n";
+    }
+    
     std::ifstream config_in(Resources::config_filename());
     string used_titles_num;
     getline(config_in, used_titles_num);
